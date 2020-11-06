@@ -41,7 +41,7 @@ class _ConfirmListState extends State<ConfirmList> {
                   onPressed: () {
                     DatePicker.showDatePicker(context,
                         showTitleActions: true,
-                        minTime: DateTime(2020),
+                        minTime: DateTime(2018),
                         maxTime: DateTime(2022), onChanged: (date) {
                       print('change $date');
                     }, onConfirm: (date) {
@@ -58,7 +58,10 @@ class _ConfirmListState extends State<ConfirmList> {
                   },
                   child: Text(
                     'Select Date',
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 15.0,
+                    ),
                   ),
                 ),
               ),
@@ -75,10 +78,29 @@ class _ConfirmListState extends State<ConfirmList> {
                     }
                     if (snapshot.hasError) {
                       return Center(
-                        child: Text("Error fetching Data"),
+                        child: Text(
+                          "Error fetching Data",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                          ),
+                        ),
                       );
                     }
                     List snap = snapshot.data;
+                    if (snap.length == 0) {
+                      return Center(
+                        child: Text(
+                          'No Reservations made for $dateSub',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                          ),
+                        ),
+                      );
+                    }
                     return ListView.builder(
                       itemCount: snap.length,
                       itemBuilder: (context, index) {
