@@ -208,35 +208,3 @@ class _ManagerAccountState extends State<ManagerAccount> {
     );
   }
 }
-
-//Column(
-//children: <Widget>[
-//Icon(
-//Icons.account_box,
-//size: 100.0,
-//color: Colors.black54,
-//),
-//SizedBox(
-//height: 20.0,
-//),
-//Text(
-//'Name: ${snap[index]['mang_name']}',
-//style: TextStyle(
-//fontSize: 30.0,
-//),
-//),
-//Text('Manager ID: ${snap[index]['mang_id']}'),
-//Text('Restaurant ID: ${snap[index]['res_id']}'),
-//FlatButton.icon(
-//onPressed: null, //TODO: Navigate to login page
-//icon: Icon(
-//Icons.power_settings_new,
-//color: Colors.red,
-//),
-//label: Text(
-//'Logout',
-//style: TextStyle(color: Colors.red),
-//),
-//),
-//],
-//),

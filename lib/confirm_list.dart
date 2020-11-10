@@ -31,7 +31,6 @@ class _ConfirmListState extends State<ConfirmList> {
       ),
       body: new Builder(
         builder: (BuildContext context) {
-          DateTime date;
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
@@ -57,9 +56,9 @@ class _ConfirmListState extends State<ConfirmList> {
                     }, currentTime: DateTime.now(), locale: LocaleType.en);
                   },
                   child: Text(
-                    'Select Date',
+                    'SELECT DATE',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.indigo,
                       fontSize: 15.0,
                     ),
                   ),
@@ -69,7 +68,7 @@ class _ConfirmListState extends State<ConfirmList> {
                 flex: 9,
                 child: FutureBuilder(
                   future: confirmList('400001',
-                      '$dateSub'), //TODO: Change hardcoded value to mang_id received from login
+                      dateSub), //TODO: Change hardcoded value to mang_id received from login
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return Center(

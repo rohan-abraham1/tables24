@@ -33,15 +33,11 @@ class _ManagerScreenState extends State<ManagerScreen> {
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.confirmation_number,
-            ),
-            title: Text(
-              'Confirmed',
-            ),
+            icon: Icon(Icons.confirmation_number),
+            title: Text('Reservations'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.query_builder),
+            icon: Icon(Icons.access_time),
             title: Text('Pending'),
           ),
           BottomNavigationBarItem(
